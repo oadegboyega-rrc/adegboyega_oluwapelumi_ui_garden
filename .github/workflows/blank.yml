@@ -1,0 +1,70 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI/CD Pipeline
+
+# Controls when the workflow will run
+on: 
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "quality-checks"
+  quality-checks:
+  
+  # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v4
+
+      # Sets up Node.js environment
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # Installs project dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Runs code quality checks
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Check Prettier formatting
+        run: npm run format -- --check
+
+      - name: Run tests
+        run: npm test
+
+      # Builds the application
+      - name: Build project
+        run: |
+          npm run build
+          npm run build-storybook
+
+      # Docker operations
+      - name: Build Docker image
+        run: docker build -t adegboyega_oluwapelumi_coding_assignment13 .
+
+      - name: Test Docker container
+        run: |
+          docker run -d -p 8018:8018 --name test_container adegboyega_oluwapelumi_coding_assignment13
+          sleep 5
+          curl --fail http://localhost:8018
+          docker stop test_container
+          docker rm test_container
+
+      # Optional: Add deployment steps here if needed
+      - name: Deploy to production
+        run: |
+          echo "Deployment logic would go here"
