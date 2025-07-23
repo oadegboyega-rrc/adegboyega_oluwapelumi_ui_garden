@@ -1,7 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: !0 });
-var e = require("react/jsx-runtime");
-exports.Button = function (t) {
-  return e.jsx("button", { children: t.label });
+/**
+ * @typedef {Object} ButtonProps
+ * @property {string} label - The button text
+ */
+
+/**
+ * Button component
+ * @param {ButtonProps} props
+ */
+export const Button = (props) => {
+  return jsx("button", { children: props.label });
 };
-//# sourceMappingURL=index.js.map
