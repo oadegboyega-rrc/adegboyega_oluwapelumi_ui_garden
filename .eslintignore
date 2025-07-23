@@ -1,0 +1,10 @@
+# .eslintignore
+dist/
+storybook-static/
+node_modules/
+*.config.js
+*.config.cjs
+*.stories.js
+*.stories.jsx
+*.stories.ts
+*.stories.tsx

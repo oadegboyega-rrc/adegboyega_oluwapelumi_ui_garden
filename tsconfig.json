@@ -15,8 +15,17 @@
     "isolatedModules": true,
     "declaration": true,
     "declarationDir": "dist/esm/types",
-    "outDir": "dist/esm",
-    "jsx": "react-jsx"
+    "outDir": "./dist/",
+    "jsx": "react-jsx",
+    "types": ["node", "jest"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    ".storybook/preview.ts",
+    "src/types"
+  ]
 }
