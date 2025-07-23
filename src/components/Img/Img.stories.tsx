@@ -1,4 +1,3 @@
-import React from "react";
 import Img from "./Img";
 import type { Meta, StoryObj } from "@storybook/react";
 

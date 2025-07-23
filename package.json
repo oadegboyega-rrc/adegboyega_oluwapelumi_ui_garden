@@ -13,7 +13,7 @@
   "scripts": {
     "rollup": "rollup -c",
     "build:ts": "tsc --emitDeclarationOnly",
-    "storybook": "storybook dev -p 8081",
+    "storybook": "storybook dev -p 8018",
     "build-storybook": "storybook build",
     "start": "react-scripts start",
     "test": "jest",

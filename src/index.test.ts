@@ -1,5 +1,5 @@
-const { sum } = require("./index"); // Adjust the import based on your actual function/component
+import { sum } from "./index"; // ✅ Replaces require()
 
 test("hello world!", () => {
-  expect(sum(1, 1)).toBe(2); // Replace with actual test case
+  expect(sum(1, 1)).toBe(2);
 });

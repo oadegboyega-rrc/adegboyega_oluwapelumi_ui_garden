@@ -1,4 +1,3 @@
-import React from "react";
 import HeroImage from "./HeroImage";
 import type { Meta, StoryObj } from "@storybook/react";
 
