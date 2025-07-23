@@ -9,6 +9,7 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     plugins: { js },
     extends: ["js/recommended"],
+    ignores: ["dist/", "build/", "storybook-static/"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],

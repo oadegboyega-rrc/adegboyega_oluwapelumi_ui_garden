@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-const { createDefaultPreset } = require("ts-jest");
 
-// const { pathsToModuleNameMapper } = require('ts-jest/utils');
-
-// const tsJestTransformCfg = createDefaultPreset().transform;
+import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { createDefaultPreset } from 'ts-jest';
 
 /** @type {import("jest").Config} **/
 module.exports = {
