@@ -67,5 +67,15 @@ module.exports = {
     describe: true,
     it: true,
     expect: true
-  }
+  },
+    overrides: [
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'off'
+      }
+    }
+  ]
 }
