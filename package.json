@@ -24,7 +24,7 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "build": "react-scripts build"
+    "build": "npm run build:ts && npm run rollup"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
