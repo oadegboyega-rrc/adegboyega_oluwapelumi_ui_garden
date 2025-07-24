@@ -6,6 +6,7 @@
   "license": "ISC",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -18,7 +19,7 @@
     "start": "react-scripts start",
     "test": "jest",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
@@ -41,6 +42,8 @@
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-storybook": "^9.0.18",

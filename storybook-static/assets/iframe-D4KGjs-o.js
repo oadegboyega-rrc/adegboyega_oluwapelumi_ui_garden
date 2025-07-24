@@ -45848,7 +45848,7 @@ function qc(e, t, r) {
       return E;
     }, "applyLoaders"),
     u = s(async (w) => {
-      let E = new Array();
+      let E = [];
       for (let C of [
         ...nt(r.beforeEach),
         ...nt(t.beforeEach),

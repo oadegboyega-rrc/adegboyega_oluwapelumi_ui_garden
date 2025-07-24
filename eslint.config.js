@@ -1,29 +1,37 @@
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
+import typescriptParser from '@typescript-eslint/parser';
+import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 
-export default defineConfig([
+export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    plugins: { js },
-    extends: ["js/recommended"],
-    ignores: ["node_modules/","dist/", "*.config.js", "coverage/", "build/", "storybook-static/"],
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    files: ['**/*.ts', '**/*.tsx'], // Apply this configuration to TypeScript files
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-    },
-  },
-  tseslint.configs.recommended,
-  {
-    ...pluginReact.configs.flat.recommended,
-    settings: {
-      react: {
-        version: "detect", // 👈 this tells eslint-plugin-react to auto-detect React version
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest', // Or a specific ECMAScript version (e.g., 2022)
+        sourceType: 'module', // Or 'script' depending on your project
+        //project: './tsconfig.json', // Path to your tsconfig.json for type-aware linting
+        // You can also specify an array of tsconfig paths or globs:
+        // project: ['./tsconfig.json', './packages/*/tsconfig.json'],
       },
     },
+    plugins: {
+      '@typescript-eslint': typescriptPlugin,
+    },
+    rules: {
+      // Add your TypeScript-specific ESLint rules here
+      // For example:
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+          allowTaggedTemplates: true,
+        },
+      ],
+    },
   },
-]);
+  // You can add other configurations for JavaScript files or other purposes
+];
+ 
