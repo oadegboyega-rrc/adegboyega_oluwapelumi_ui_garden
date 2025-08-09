@@ -1,0 +1,52 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint -- --max-warnings 0
+
+      - name: Typecheck
+        run: npm run type-check
+
+      - name: Check Prettier formatting
+        run: npm run format -- --check
+
+      - name: Run tests
+        run: npm test -- --ci --coverage
+
+      - name: Build project
+        run: |
+          npm run build
+          npm run build-storybook -- --quiet
+
+      - name: Build Docker image
+        run: docker build -t adegboyega_oluwapelumi_coding_assignment13 .
+
+      - name: Test Docker container
+        run: |
+          docker run -d -p 8018:8018 --name test_container adegboyega_oluwapelumi_coding_assignment13
+          sleep 5
+          curl --fail http://localhost:8018
+          docker stop test_container
+          docker rm test_container
+
