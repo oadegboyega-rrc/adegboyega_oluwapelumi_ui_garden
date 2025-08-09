@@ -6,16 +6,19 @@ FROM node:20-alpine AS build
 # Build the library first so it's available to the CRA app via file dependency
 WORKDIR /repo
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run build 
 
 # Now install and build the CRA portfolio app
 WORKDIR /repo/portfolio-site
+# Copy only manifest first for cached, reproducible installs
 COPY portfolio-site/package*.json ./
 # Install with production deps only for faster build (dev deps not required for CRA build)
-RUN npm install --omit=dev
-COPY portfolio-site .
+RUN npm ci --omit=dev
+# Now copy the app sources
+COPY portfolio-site ./
+ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN npm run build
 
 ############################################################
