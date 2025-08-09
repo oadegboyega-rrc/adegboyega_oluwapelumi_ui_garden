@@ -44,7 +44,7 @@ jobs:
 
       - name: Test Docker container
         run: |
-          docker run -d -p 8018:8018 --name test_container adegboyega_oluwapelumi_coding_assignment13
+          docker run -d -p 8018:5575 --name test_container adegboyega_oluwapelumi_coding_assignment13
           sleep 5
           curl --fail http://localhost:8018
           docker stop test_container
