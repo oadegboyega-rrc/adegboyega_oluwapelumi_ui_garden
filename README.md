@@ -1,4 +1,4 @@
-# UI Component Library Build Checks
+# Portfolio Site (Dockerized CRA) + UI Component Library
 
 ## Getting Started
 
@@ -26,16 +26,20 @@ npm run storybook
 npm run build-storybook
 ```
 
-## Docker Usage
+## Docker Usage (Assignment 14 Requirements)
 
-Build and run the Docker container:
+- Container name: `adegboyega_oluwapelumi_coding_assignment14`
+- Working dir in image: `adegboyega_oluwapelumi_final_site`
+- App served at: `http://localhost:5575`
+
+Build and run:
 
 ```
-docker build -t adegboyega_oluwapelumi_coding_assignment13 .
-docker run -d -p 8018:8018 --name adegboyega_oluwapelumi_coding_assignment13 adegboyega_oluwapelumi_coding_assignment13
+docker build -t adegboyega_oluwapelumi_coding_assignment14 .
+docker run -d -p 5575:5575 --name adegboyega_oluwapelumi_coding_assignment14 adegboyega_oluwapelumi_coding_assignment14
 ```
 
-Visit [http://localhost:8018](http://localhost:8018) to view the app.
+Then open `http://localhost:5575`.
 
 ## Code Quality Checks
 
@@ -80,7 +84,7 @@ A React component library project with Storybook for building and showcasing reu
 npm install
 ```
 
-### Run Storybook locally
+### Run Storybook locally (component library)
 
 ```sh
 npm run storybook
@@ -88,20 +92,31 @@ npm run storybook
 
 Visit [http://localhost:6006](http://localhost:6006) in your browser.
 
-### Build Storybook static site
+### Build Storybook static site (optional)
 
 ```sh
 npm run build-storybook
 ```
 
-### Run with Docker
+### Run Storybook with Docker (optional)
 
 ```sh
 docker build -t ui-garden .
 docker run -p 8080:80 ui-garden
 ```
 
-Visit [http://localhost:8080](http://localhost:8080).
+Visit `http://localhost:8080`.
+
+## Portfolio App Structure
+
+- `portfolio-site/` – Create React App using components from the local library via `file:` dependency
+- Served via Nginx from working dir `adegboyega_oluwapelumi_final_site`
+
+## CI/CD Summary
+
+- Build pipeline compiles the component library and the CRA app.
+- Docker image multi-stage build produces an optimized Nginx image serving the CRA build on port 5575.
+- This demonstrates CI (build/test) and CD (containerized deploy) for web apps.
 
 ## Project Structure
 
