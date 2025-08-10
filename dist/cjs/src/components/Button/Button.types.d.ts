@@ -1,5 +1,6 @@
 import React from "react";
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    text: string;
-    disabled?: boolean;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string;
+  disabled?: boolean;
 }

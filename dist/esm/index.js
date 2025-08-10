@@ -1,2 +1,189 @@
-import{jsx as t,jsxs as e}from"react/jsx-runtime";var r=function(){return r=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var i in e=arguments[r])Object.prototype.hasOwnProperty.call(e,i)&&(t[i]=e[i]);return t},r.apply(this,arguments)};function n(t,e){var r={};for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&e.indexOf(n)<0&&(r[n]=t[n]);if(null!=t&&"function"==typeof Object.getOwnPropertySymbols){var i=0;for(n=Object.getOwnPropertySymbols(t);i<n.length;i++)e.indexOf(n[i])<0&&Object.prototype.propertyIsEnumerable.call(t,n[i])&&(r[n[i]]=t[n[i]])}return r}"function"==typeof SuppressedError&&SuppressedError;var i=function(e){var i=e.text,a=e.disabled,l=n(e,["text","disabled"]);return t("button",r({"data-testid":"Button",disabled:a,style:{color:a?"#999":"#000"}},l,{children:i}))},a=function(e){var i=e.text,a=e.disabled,l=n(e,["text","disabled"]);return t("label",r({"data-testid":"label",style:{color:a?"#999":"#000"}},l,{children:i}))},l=function(e){var i=e.children,a=n(e,["children"]);return t("table",r({"data-testid":"table"},a,{children:i}))},d=function(e){var i=e.children,a=n(e,["children"]);return t("thead",r({"data-testid":"table-header"},a,{children:i}))},o=function(e){var i=e.children,a=n(e,["children"]);return t("tr",r({"data-testid":"table-row"},a,{children:i}))},c=function(e){var i=e.children,a=n(e,["children"]);return t("td",r({"data-testid":"table-cell"},a,{children:i}))},s=function(e){var i=e.children,a=n(e,["children"]);return t("tfoot",r({"data-testid":"table-footer"},a,{children:i}))},u=function(e){var i=e.options,a=n(e,["options"]);return t("select",r({"data-testid":"dropdown"},a,{children:i.map(function(e){return t("option",r({value:e.value},{children:e.label}),e.value)})}))},h=function(i){var a=i.label,l=n(i,["label"]);return e("label",r({style:{display:"inline-flex",alignItems:"center",gap:4}},{children:[t("input",r({"data-testid":"radio-button",type:"radio"},l)),a&&t("span",{children:a})]}))},p=function(e){var i=e.src,a=e.alt,l=void 0===a?"image":a,d=n(e,["src","alt"]);return t("img",r({"data-testid":"img",src:i,alt:l},d))},b=function(e){var i=e.src,a=e.alt,l=void 0===a?"Hero Image":a,d=e.height,o=void 0===d?"auto":d,c=e.width,s=void 0===c?"100%":c,u=e.style,h=n(e,["src","alt","height","width","style"]);return t("img",r({"data-testid":"hero-image",src:i,alt:l,height:o,width:s,style:r({display:"block",width:s,height:o,objectFit:"cover"},u)},h))},f=function(e){var i=e.children,a=n(e,["children"]);return t("div",r({"data-testid":"card",style:{border:"1px solid #eee",borderRadius:8,padding:16,boxShadow:"0 2px 8px #eee"}},a,{children:i}))};function v(t,e){return t+e}export{i as Button,f as Card,u as Dropdown,b as HeroImage,p as Img,a as Label,h as RadioButton,l as Table,c as TableCell,s as TableFooter,d as TableHeader,o as TableRow,v as sum};
+import { jsx as t, jsxs as e } from "react/jsx-runtime";
+var r = function () {
+  return (
+    (r =
+      Object.assign ||
+      function (t) {
+        for (var e, r = 1, n = arguments.length; r < n; r++)
+          for (var i in (e = arguments[r]))
+            Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
+        return t;
+      }),
+    r.apply(this, arguments)
+  );
+};
+function n(t, e) {
+  var r = {};
+  for (var n in t)
+    Object.prototype.hasOwnProperty.call(t, n) &&
+      e.indexOf(n) < 0 &&
+      (r[n] = t[n]);
+  if (null != t && "function" == typeof Object.getOwnPropertySymbols) {
+    var i = 0;
+    for (n = Object.getOwnPropertySymbols(t); i < n.length; i++)
+      e.indexOf(n[i]) < 0 &&
+        Object.prototype.propertyIsEnumerable.call(t, n[i]) &&
+        (r[n[i]] = t[n[i]]);
+  }
+  return r;
+}
+"function" == typeof SuppressedError && SuppressedError;
+var i = function (e) {
+    var i = e.text,
+      a = e.disabled,
+      l = n(e, ["text", "disabled"]);
+    return t(
+      "button",
+      r(
+        {
+          "data-testid": "Button",
+          disabled: a,
+          style: { color: a ? "#999" : "#000" },
+        },
+        l,
+        { children: i },
+      ),
+    );
+  },
+  a = function (e) {
+    var i = e.text,
+      a = e.disabled,
+      l = n(e, ["text", "disabled"]);
+    return t(
+      "label",
+      r({ "data-testid": "label", style: { color: a ? "#999" : "#000" } }, l, {
+        children: i,
+      }),
+    );
+  },
+  l = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t("table", r({ "data-testid": "table" }, a, { children: i }));
+  },
+  d = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t("thead", r({ "data-testid": "table-header" }, a, { children: i }));
+  },
+  o = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t("tr", r({ "data-testid": "table-row" }, a, { children: i }));
+  },
+  c = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t("td", r({ "data-testid": "table-cell" }, a, { children: i }));
+  },
+  s = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t("tfoot", r({ "data-testid": "table-footer" }, a, { children: i }));
+  },
+  u = function (e) {
+    var i = e.options,
+      a = n(e, ["options"]);
+    return t(
+      "select",
+      r({ "data-testid": "dropdown" }, a, {
+        children: i.map(function (e) {
+          return t(
+            "option",
+            r({ value: e.value }, { children: e.label }),
+            e.value,
+          );
+        }),
+      }),
+    );
+  },
+  h = function (i) {
+    var a = i.label,
+      l = n(i, ["label"]);
+    return e(
+      "label",
+      r(
+        { style: { display: "inline-flex", alignItems: "center", gap: 4 } },
+        {
+          children: [
+            t("input", r({ "data-testid": "radio-button", type: "radio" }, l)),
+            a && t("span", { children: a }),
+          ],
+        },
+      ),
+    );
+  },
+  p = function (e) {
+    var i = e.src,
+      a = e.alt,
+      l = void 0 === a ? "image" : a,
+      d = n(e, ["src", "alt"]);
+    return t("img", r({ "data-testid": "img", src: i, alt: l }, d));
+  },
+  b = function (e) {
+    var i = e.src,
+      a = e.alt,
+      l = void 0 === a ? "Hero Image" : a,
+      d = e.height,
+      o = void 0 === d ? "auto" : d,
+      c = e.width,
+      s = void 0 === c ? "100%" : c,
+      u = e.style,
+      h = n(e, ["src", "alt", "height", "width", "style"]);
+    return t(
+      "img",
+      r(
+        {
+          "data-testid": "hero-image",
+          src: i,
+          alt: l,
+          height: o,
+          width: s,
+          style: r(
+            { display: "block", width: s, height: o, objectFit: "cover" },
+            u,
+          ),
+        },
+        h,
+      ),
+    );
+  },
+  f = function (e) {
+    var i = e.children,
+      a = n(e, ["children"]);
+    return t(
+      "div",
+      r(
+        {
+          "data-testid": "card",
+          style: {
+            border: "1px solid #eee",
+            borderRadius: 8,
+            padding: 16,
+            boxShadow: "0 2px 8px #eee",
+          },
+        },
+        a,
+        { children: i },
+      ),
+    );
+  };
+function v(t, e) {
+  return t + e;
+}
+export {
+  i as Button,
+  f as Card,
+  u as Dropdown,
+  b as HeroImage,
+  p as Img,
+  a as Label,
+  h as RadioButton,
+  l as Table,
+  c as TableCell,
+  s as TableFooter,
+  d as TableHeader,
+  o as TableRow,
+  v as sum,
+};
 //# sourceMappingURL=index.js.map

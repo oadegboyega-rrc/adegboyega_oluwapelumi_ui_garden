@@ -18,14 +18,7 @@
     "outDir": "./dist/",
     "jsx": "react-jsx",
     "types": ["node", "jest"],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ]
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": [
-    "src",
-    ".storybook/preview.ts",
-    "src/types"
-  ]
+  "include": ["src", ".storybook/preview.ts", "src/types"]
 }

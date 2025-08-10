@@ -49152,7 +49152,7 @@ Symbol]"
           "%encodeURIComponent%": encodeURIComponent,
           "%Error%": o,
           "%eval%": eval,
-           
+
           "%EvalError%": i,
           "%Float16Array%": typeof Float16Array > "u" ? r : Float16Array,
           "%Float32Array%": typeof Float32Array > "u" ? r : Float32Array,
@@ -69644,7 +69644,7 @@ function kX(
     maxArrayLength: i = 1 / 0,
     breakLength: s = 1 / 0,
     seen: l = [],
-     
+
     truncate: u = 1 / 0,
     stylize: c = String,
   } = {},
@@ -72838,7 +72838,7 @@ function $J(
     maxArrayLength: i = 1 / 0,
     breakLength: s = 1 / 0,
     seen: l = [],
-     
+
     truncate: u = 1 / 0,
     stylize: c = String,
   } = {},
@@ -73610,8 +73610,7 @@ F(Dm, "deepEqual");
 function FI(e, t) {
   return e === t
     ? e !== 0 || 1 / e === 1 / t
-    : e !== e &&  
-        t !== t
+    : e !== e && t !== t
       ? !0
       : nu(e) || nu(t)
         ? !1
@@ -74067,7 +74066,7 @@ function wd(e, t) {
                 fQ(n).forEach(function (l) {
                   if (
                     // we actually mean to check `Object.prototype` here
-                     
+
                     !Object.prototype.hasOwnProperty(l) &&
                     TJ.indexOf(l) === -1
                   ) {
@@ -77037,13 +77036,9 @@ var $Ne = /* @__PURE__ */ (function () {
 // ../node_modules/@testing-library/jest-dom/node_modules/dom-accessibility-api/dist/getRole.mjs
 function qt(e) {
   var t;
-  return (
-     
-    (t = e.localName) !== null && t !== void 0
-      ? t
-      :  
-        e.tagName.toLowerCase()
-  );
+  return (t = e.localName) !== null && t !== void 0
+    ? t
+    : e.tagName.toLowerCase();
 }
 a(qt, "getLocalName");
 var HNe = {
@@ -77827,7 +77822,7 @@ var G8 = class G8 extends Error {
     this.message = [
       o.utils.matcherHint(`${o.isNot ? ".not" : ""}.${n.name}`, "received", ""),
       "",
-       
+
       `${o.utils.RECEIVED_COLOR("received")} value must ${t}.`,
       i,
     ].join(`
@@ -77875,9 +77870,9 @@ var X8 = class X8 extends Error {
       (this.message = [
         t.message,
         "",
-         
+
         n.utils.RECEIVED_COLOR("Failing css:"),
-         
+
         n.utils.RECEIVED_COLOR(`${t.css}`),
       ].join(`
 `)));
@@ -77910,10 +77905,10 @@ function gr(e, t, r, n, o, i) {
   return [
     `${t}
 `,
-     
+
     `${r}:
 ${e.utils.EXPECTED_COLOR((0, E8.default)(Zae(e, n), 2))}`,
-     
+
     `${o}:
 ${e.utils.RECEIVED_COLOR((0, E8.default)(Zae(e, i), 2))}`,
   ].join(`
@@ -78038,7 +78033,7 @@ in element, found ${this.utils.stringify(e.cloneNode(!0))} instead`,
             "",
           ),
           "",
-           
+
           this.utils.RECEIVED_COLOR(this.isNot ? r() : n()),
         ].join(`
 `),
@@ -78118,7 +78113,7 @@ function l2(e, t) {
               "element",
             ),
             "",
-             
+
             this.utils.RECEIVED_COLOR(`${this.utils.stringify(
               e.cloneNode(!1),
             )} ${this.isNot ? "contains:" : "does not contain:"} ${this.utils.stringify(t && t.cloneNode(!1))}
@@ -78150,7 +78145,7 @@ function P8(e, t) {
             "",
           ),
           "Expected:",
-           
+
           `  ${this.utils.EXPECTED_COLOR(t)}`,
           "Received:",
           `  ${this.utils.printReceived(e.cloneNode(!0))}`,
@@ -82458,13 +82453,9 @@ var OYe = /* @__PURE__ */ (function () {
 // ../node_modules/dom-accessibility-api/dist/getRole.mjs
 function Vt(e) {
   var t;
-  return (
-     
-    (t = e.localName) !== null && t !== void 0
-      ? t
-      :  
-        e.tagName.toLowerCase()
-  );
+  return (t = e.localName) !== null && t !== void 0
+    ? t
+    : e.tagName.toLowerCase();
 }
 a(Vt, "getLocalName");
 var IYe = {
@@ -83449,7 +83440,6 @@ function eN() {
   return typeof jest < "u" && jest !== null
     ? // legacy timers
       setTimeout._isMockFunction === !0 || // modern timers
-         
         Object.prototype.hasOwnProperty.call(setTimeout, "clock")
     : !1;
 }
@@ -83721,7 +83711,6 @@ a(Yde, "getLabels");
 function Kde(e) {
   if (e == null)
     throw new Error(
-       
       "It looks like " +
         e +
         " was passed instead of a matcher. Did you do something like getByText(" +
@@ -84429,10 +84418,7 @@ var Fs = /* @__PURE__ */ a(
           if (
             // only want to suggest if all the els have the same suggestion.
             c.length === 1 &&
-            !t.endsWith(
-               
-              BS(l[0], r).queryName,
-            )
+            !t.endsWith(BS(l[0], r).queryName)
           )
             throw tfe(c[0], n);
         }

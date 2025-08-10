@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# UI Component Library Build Checks
-=======
 # Portfolio Site (Dockerized CRA) + UI Component Library
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ## Getting Started
 
@@ -30,18 +26,6 @@ npm run storybook
 npm run build-storybook
 ```
 
-<<<<<<< HEAD
-## Docker Usage
-
-Build and run the Docker container:
-
-```
-docker build -t adegboyega_oluwapelumi_coding_assignment13 .
-docker run -d -p 8018:8018 --name adegboyega_oluwapelumi_coding_assignment13 adegboyega_oluwapelumi_coding_assignment13
-```
-
-Visit [http://localhost:8018](http://localhost:8018) to view the app.
-=======
 ## Docker Usage (Assignment 14 Requirements)
 
 - Container name: `adegboyega_oluwapelumi_coding_assignment14`
@@ -56,7 +40,6 @@ docker run -d -p 5575:5575 --name adegboyega_oluwapelumi_coding_assignment14 ade
 ```
 
 Then open `http://localhost:5575`.
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ## Code Quality Checks
 
@@ -101,11 +84,7 @@ A React component library project with Storybook for building and showcasing reu
 npm install
 ```
 
-<<<<<<< HEAD
-### Run Storybook locally
-=======
 ### Run Storybook locally (component library)
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ```sh
 npm run storybook
@@ -113,30 +92,19 @@ npm run storybook
 
 Visit [http://localhost:6006](http://localhost:6006) in your browser.
 
-<<<<<<< HEAD
-### Build Storybook static site
-=======
 ### Build Storybook static site (optional)
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ```sh
 npm run build-storybook
 ```
 
-<<<<<<< HEAD
-### Run with Docker
-=======
 ### Run Storybook with Docker (optional)
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ```sh
 docker build -t ui-garden .
 docker run -p 8080:80 ui-garden
 ```
 
-<<<<<<< HEAD
-Visit [http://localhost:8080](http://localhost:8080).
-=======
 Visit `http://localhost:8080`.
 
 ## Portfolio App Structure
@@ -149,7 +117,6 @@ Visit `http://localhost:8080`.
 - Build pipeline compiles the component library and the CRA app.
 - Docker image multi-stage build produces an optimized Nginx image serving the CRA build on port 5575.
 - This demonstrates CI (build/test) and CD (containerized deploy) for web apps.
->>>>>>> 11613018d2583fdfe9811d663cf064abcef142e8
 
 ## Project Structure
 

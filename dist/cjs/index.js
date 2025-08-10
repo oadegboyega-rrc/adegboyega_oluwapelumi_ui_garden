@@ -1,2 +1,185 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("react/jsx-runtime"),t=function(){return t=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e},t.apply(this,arguments)};function r(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r}"function"==typeof SuppressedError&&SuppressedError;exports.Button=function(n){var a=n.text,i=n.disabled,o=r(n,["text","disabled"]);return e.jsx("button",t({"data-testid":"Button",disabled:i,style:{color:i?"#999":"#000"}},o,{children:a}))},exports.Card=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("div",t({"data-testid":"card",style:{border:"1px solid #eee",borderRadius:8,padding:16,boxShadow:"0 2px 8px #eee"}},i,{children:a}))},exports.Dropdown=function(n){var a=n.options,i=r(n,["options"]);return e.jsx("select",t({"data-testid":"dropdown"},i,{children:a.map(function(r){return e.jsx("option",t({value:r.value},{children:r.label}),r.value)})}))},exports.HeroImage=function(n){var a=n.src,i=n.alt,o=void 0===i?"Hero Image":i,l=n.height,d=void 0===l?"auto":l,s=n.width,c=void 0===s?"100%":s,u=n.style,p=r(n,["src","alt","height","width","style"]);return e.jsx("img",t({"data-testid":"hero-image",src:a,alt:o,height:d,width:c,style:t({display:"block",width:c,height:d,objectFit:"cover"},u)},p))},exports.Img=function(n){var a=n.src,i=n.alt,o=void 0===i?"image":i,l=r(n,["src","alt"]);return e.jsx("img",t({"data-testid":"img",src:a,alt:o},l))},exports.Label=function(n){var a=n.text,i=n.disabled,o=r(n,["text","disabled"]);return e.jsx("label",t({"data-testid":"label",style:{color:i?"#999":"#000"}},o,{children:a}))},exports.RadioButton=function(n){var a=n.label,i=r(n,["label"]);return e.jsxs("label",t({style:{display:"inline-flex",alignItems:"center",gap:4}},{children:[e.jsx("input",t({"data-testid":"radio-button",type:"radio"},i)),a&&e.jsx("span",{children:a})]}))},exports.Table=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("table",t({"data-testid":"table"},i,{children:a}))},exports.TableCell=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("td",t({"data-testid":"table-cell"},i,{children:a}))},exports.TableFooter=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("tfoot",t({"data-testid":"table-footer"},i,{children:a}))},exports.TableHeader=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("thead",t({"data-testid":"table-header"},i,{children:a}))},exports.TableRow=function(n){var a=n.children,i=r(n,["children"]);return e.jsx("tr",t({"data-testid":"table-row"},i,{children:a}))},exports.sum=function(e,t){return e+t};
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: !0 });
+var e = require("react/jsx-runtime"),
+  t = function () {
+    return (
+      (t =
+        Object.assign ||
+        function (e) {
+          for (var t, r = 1, n = arguments.length; r < n; r++)
+            for (var a in (t = arguments[r]))
+              Object.prototype.hasOwnProperty.call(t, a) && (e[a] = t[a]);
+          return e;
+        }),
+      t.apply(this, arguments)
+    );
+  };
+function r(e, t) {
+  var r = {};
+  for (var n in e)
+    Object.prototype.hasOwnProperty.call(e, n) &&
+      t.indexOf(n) < 0 &&
+      (r[n] = e[n]);
+  if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
+    var a = 0;
+    for (n = Object.getOwnPropertySymbols(e); a < n.length; a++)
+      t.indexOf(n[a]) < 0 &&
+        Object.prototype.propertyIsEnumerable.call(e, n[a]) &&
+        (r[n[a]] = e[n[a]]);
+  }
+  return r;
+}
+"function" == typeof SuppressedError && SuppressedError;
+((exports.Button = function (n) {
+  var a = n.text,
+    i = n.disabled,
+    o = r(n, ["text", "disabled"]);
+  return e.jsx(
+    "button",
+    t(
+      {
+        "data-testid": "Button",
+        disabled: i,
+        style: { color: i ? "#999" : "#000" },
+      },
+      o,
+      { children: a },
+    ),
+  );
+}),
+  (exports.Card = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx(
+      "div",
+      t(
+        {
+          "data-testid": "card",
+          style: {
+            border: "1px solid #eee",
+            borderRadius: 8,
+            padding: 16,
+            boxShadow: "0 2px 8px #eee",
+          },
+        },
+        i,
+        { children: a },
+      ),
+    );
+  }),
+  (exports.Dropdown = function (n) {
+    var a = n.options,
+      i = r(n, ["options"]);
+    return e.jsx(
+      "select",
+      t({ "data-testid": "dropdown" }, i, {
+        children: a.map(function (r) {
+          return e.jsx(
+            "option",
+            t({ value: r.value }, { children: r.label }),
+            r.value,
+          );
+        }),
+      }),
+    );
+  }),
+  (exports.HeroImage = function (n) {
+    var a = n.src,
+      i = n.alt,
+      o = void 0 === i ? "Hero Image" : i,
+      l = n.height,
+      d = void 0 === l ? "auto" : l,
+      s = n.width,
+      c = void 0 === s ? "100%" : s,
+      u = n.style,
+      p = r(n, ["src", "alt", "height", "width", "style"]);
+    return e.jsx(
+      "img",
+      t(
+        {
+          "data-testid": "hero-image",
+          src: a,
+          alt: o,
+          height: d,
+          width: c,
+          style: t(
+            { display: "block", width: c, height: d, objectFit: "cover" },
+            u,
+          ),
+        },
+        p,
+      ),
+    );
+  }),
+  (exports.Img = function (n) {
+    var a = n.src,
+      i = n.alt,
+      o = void 0 === i ? "image" : i,
+      l = r(n, ["src", "alt"]);
+    return e.jsx("img", t({ "data-testid": "img", src: a, alt: o }, l));
+  }),
+  (exports.Label = function (n) {
+    var a = n.text,
+      i = n.disabled,
+      o = r(n, ["text", "disabled"]);
+    return e.jsx(
+      "label",
+      t({ "data-testid": "label", style: { color: i ? "#999" : "#000" } }, o, {
+        children: a,
+      }),
+    );
+  }),
+  (exports.RadioButton = function (n) {
+    var a = n.label,
+      i = r(n, ["label"]);
+    return e.jsxs(
+      "label",
+      t(
+        { style: { display: "inline-flex", alignItems: "center", gap: 4 } },
+        {
+          children: [
+            e.jsx(
+              "input",
+              t({ "data-testid": "radio-button", type: "radio" }, i),
+            ),
+            a && e.jsx("span", { children: a }),
+          ],
+        },
+      ),
+    );
+  }),
+  (exports.Table = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx("table", t({ "data-testid": "table" }, i, { children: a }));
+  }),
+  (exports.TableCell = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx("td", t({ "data-testid": "table-cell" }, i, { children: a }));
+  }),
+  (exports.TableFooter = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx(
+      "tfoot",
+      t({ "data-testid": "table-footer" }, i, { children: a }),
+    );
+  }),
+  (exports.TableHeader = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx(
+      "thead",
+      t({ "data-testid": "table-header" }, i, { children: a }),
+    );
+  }),
+  (exports.TableRow = function (n) {
+    var a = n.children,
+      i = r(n, ["children"]);
+    return e.jsx("tr", t({ "data-testid": "table-row" }, i, { children: a }));
+  }),
+  (exports.sum = function (e, t) {
+    return e + t;
+  }));
 //# sourceMappingURL=index.js.map

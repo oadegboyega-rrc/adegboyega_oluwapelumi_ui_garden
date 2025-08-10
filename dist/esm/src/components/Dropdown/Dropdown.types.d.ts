@@ -1,8 +1,9 @@
 import React from "react";
 export interface DropdownOption {
-    label: string;
-    value: string;
+  label: string;
+  value: string;
 }
-export interface DropdownProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-    options: DropdownOption[];
+export interface DropdownProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  options: DropdownOption[];
 }

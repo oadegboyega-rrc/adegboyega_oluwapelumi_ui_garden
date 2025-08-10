@@ -20,9 +20,9 @@ const preview: Preview = {
 };
 
 // Initialize global variables
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.__STORYBOOK_MODULE_TEST__ = true;
-  window.__webpack_nonce__ = '';
+  window.__webpack_nonce__ = "";
 }
 
 export default preview;
